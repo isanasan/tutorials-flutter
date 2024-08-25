@@ -1,4 +1,5 @@
 import 'package:english_words/english_words.dart';
+import 'package:example_flutter/big_card.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
@@ -44,7 +45,7 @@ class MyHomePage extends StatelessWidget {
       body: Column(
         children: [
           Text('A random awesome idea:'),
-          Text(pair.asLowerCase),
+          BigCard(pair: pair),
           ElevatedButton(
             onPressed: () {
               appState.getNext();
